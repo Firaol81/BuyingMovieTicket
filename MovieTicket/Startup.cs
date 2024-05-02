@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MovieTicket.Models;
-using MovieTicket.Services;
+
 
 namespace MovieTicket
 {
