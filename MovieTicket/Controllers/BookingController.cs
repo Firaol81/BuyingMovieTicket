@@ -85,9 +85,9 @@ namespace MovieTicket.Controllers
             return View();
         }
 
-        private Booking MapBookingViewModelToBooking(BookingViewModel bookingViewModel)
+        private Ticket MapBookingViewModelToBooking(BookingViewModel bookingViewModel)
         {
-            return new Booking
+            return new Ticket
             {
                 Id = bookingViewModel.Id,
                 FirstName = bookingViewModel.FirstName,
@@ -99,7 +99,7 @@ namespace MovieTicket.Controllers
             };
         }
 
-        private BookingViewModel MapBookingToBookingViewModel(Booking booking)
+        private BookingViewModel MapBookingToBookingViewModel(Ticket booking)
         {
             return new BookingViewModel
             {

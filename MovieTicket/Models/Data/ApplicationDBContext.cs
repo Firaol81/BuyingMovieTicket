@@ -10,13 +10,8 @@ namespace MovieTicket.Models
         {
         }
 
-        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Ticket> Bookings { get; set; }
         public DbSet<Movie> Movies { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Movie>()
-                .Ignore(m => m.Showtimes);
-        }
     }
 }
