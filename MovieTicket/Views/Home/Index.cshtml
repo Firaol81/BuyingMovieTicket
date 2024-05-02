@@ -1,0 +1,35 @@
+﻿﻿@model IEnumerable<MovieTicket.Models.Movie>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+</head>
+<body>
+    <h1>Movies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Showtimes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Description</td>
+                    <td>
+                        @foreach (var showtime in movie.Showtimes)
+                        {
+                            <p>@showtime.ToString("yyyy-MM-dd HH:mm")</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
