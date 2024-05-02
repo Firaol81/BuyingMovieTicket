@@ -13,10 +13,12 @@ namespace MovieTicket.Controllers
             _movieService = movieService;
         }
 
+
         public IActionResult Index()
         {
-            var randomMovies = _movieService.GetRandomMovies();
-            return View(randomMovies);
+            var movies = _movieService.GetMovies();
+            return View(movies);
         }
+
     }
 }

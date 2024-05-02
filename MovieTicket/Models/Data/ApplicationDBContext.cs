@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MovieTicket.Models;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-
 
 namespace MovieTicket.Models
 {
@@ -19,7 +16,7 @@ namespace MovieTicket.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Movie>()
-               .Ignore(m => m.Showtimes);
+                .Ignore(m => m.Showtimes);
         }
     }
 }

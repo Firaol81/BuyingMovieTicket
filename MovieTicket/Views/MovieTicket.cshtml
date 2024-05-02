@@ -1,0 +1,19 @@
+﻿@model MovieTicket.Models.Movie
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+</head>
+<body>
+    <h1>@Model.Title</h1>
+    <p>Description: @Model.Description</p>
+    <p>Showtimes:</p>
+    <ul>
+        @foreach (var showtime in Model.Showtimes)
+        {
+            <li>@showtime.ToString("yyyy-MM-dd HH:mm")</li>
+        }
+    </ul>
+</body>
+</html>
